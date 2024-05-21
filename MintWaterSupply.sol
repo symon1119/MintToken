@@ -4,12 +4,12 @@ pragma solidity ^0.8.20;
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract WaterSupply is ERC20 {
-    address public owner; // Declare owner variable
+    address public owner; 
     uint256 private _totalSupply;
 
     constructor() ERC20("WaterSupply", "WS") {
-        owner = msg.sender; // Assign the deployer of the contract as the owner
-        _mint(msg.sender, 10000 * 5 ** decimals()); // Mint 5,000,000 tokens initially
+        owner = msg.sender; 
+        _mint(msg.sender, 10000 * 5 ** decimals());
         _totalSupply = 10000 * 5** decimals();
     }
 
